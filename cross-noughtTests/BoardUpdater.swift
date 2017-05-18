@@ -38,4 +38,11 @@ class BoardUpdaterTests: XCTestCase {
         assertBoardsAreEqual(board1: expectedBoard, board2: testBoard )
     }
     
+    func testSecondMoveIsANought(){
+        let initialBoard = [["","X",""],["","",""],["","",""]]
+        let testBoard = board.updateBoard(row:0, column: 2, board: initialBoard)
+        let expectedBoard = [["","X","O"],["","",""],["","",""]]
+        assertBoardsAreEqual(board1: testBoard, board2: expectedBoard )
+    }
+    
 }

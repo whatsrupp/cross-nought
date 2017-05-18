@@ -13,8 +13,33 @@ class BoardUpdater {
     
     func updateBoard(row: Int, column: Int, board: [[String]]) -> [[String]]{
         var updatedBoard = board
-        updatedBoard[row][column] = "X"
+        let token = noughtOrCross(board: board)
+        updatedBoard[row][column] = token
         return updatedBoard
+    }
+    
+    func noughtOrCross(board: [[String]]) -> String{
+        var xCount: Int = 0
+        var oCount: Int = 0
+        var output : String
+
+        for row in board {
+            for token in row{
+                if token == "X"{
+                    xCount += 1
+                }
+                if token == "O"{
+                    oCount += 1
+                }
+            }
+        }
+        
+        if xCount > oCount{
+            output = "O"
+        } else {
+            output = "X"
+        }
+        return output
     }
     
     
