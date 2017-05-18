@@ -26,10 +26,6 @@ class GameTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-       
-    }
-    
     func initializesWithEmptyBoard(){
         XCTAssert(blankBoard[0]==game.board[0])
         XCTAssert(blankBoard[1]==game.board[1])

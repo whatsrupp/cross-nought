@@ -12,11 +12,12 @@
 		018187921ECE107F0059FA18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018187901ECE107F0059FA18 /* Main.storyboard */; };
 		018187941ECE107F0059FA18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018187931ECE107F0059FA18 /* Assets.xcassets */; };
 		018187971ECE107F0059FA18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018187951ECE107F0059FA18 /* LaunchScreen.storyboard */; };
-		018187A21ECE107F0059FA18 /* cross_noughtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018187A11ECE107F0059FA18 /* cross_noughtTests.swift */; };
 		018187AD1ECE107F0059FA18 /* cross_noughtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018187AC1ECE107F0059FA18 /* cross_noughtUITests.swift */; };
 		018187BB1ECE110A0059FA18 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018187BA1ECE110A0059FA18 /* Game.swift */; };
 		018187BD1ECE112C0059FA18 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018187BC1ECE112C0059FA18 /* GameTests.swift */; };
 		018187BF1ECE12870059FA18 /* Speer in Resources */ = {isa = PBXBuildFile; fileRef = 018187BE1ECE12870059FA18 /* Speer */; };
+		018187C11ECE330A0059FA18 /* BoardUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018187C01ECE330A0059FA18 /* BoardUpdater.swift */; };
+		018187C31ECE332C0059FA18 /* BoardUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018187C21ECE332C0059FA18 /* BoardUpdater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		018187961ECE107F0059FA18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		018187981ECE107F0059FA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0181879D1ECE107F0059FA18 /* cross-noughtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cross-noughtTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		018187A11ECE107F0059FA18 /* cross_noughtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cross_noughtTests.swift; sourceTree = "<group>"; };
 		018187A31ECE107F0059FA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		018187A81ECE107F0059FA18 /* cross-noughtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cross-noughtUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		018187AC1ECE107F0059FA18 /* cross_noughtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cross_noughtUITests.swift; sourceTree = "<group>"; };
@@ -53,6 +53,8 @@
 		018187BA1ECE110A0059FA18 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		018187BC1ECE112C0059FA18 /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		018187BE1ECE12870059FA18 /* Speer */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Speer; path = ../../Speer; sourceTree = "<group>"; };
+		018187C01ECE330A0059FA18 /* BoardUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardUpdater.swift; sourceTree = "<group>"; };
+		018187C21ECE332C0059FA18 /* BoardUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardUpdater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				0181878C1ECE107F0059FA18 /* AppDelegate.swift */,
 				018187BA1ECE110A0059FA18 /* Game.swift */,
+				018187C01ECE330A0059FA18 /* BoardUpdater.swift */,
 				0181878E1ECE107F0059FA18 /* ViewController.swift */,
 				018187901ECE107F0059FA18 /* Main.storyboard */,
 				018187931ECE107F0059FA18 /* Assets.xcassets */,
@@ -118,7 +121,7 @@
 		018187A01ECE107F0059FA18 /* cross-noughtTests */ = {
 			isa = PBXGroup;
 			children = (
-				018187A11ECE107F0059FA18 /* cross_noughtTests.swift */,
+				018187C21ECE332C0059FA18 /* BoardUpdater.swift */,
 				018187BC1ECE112C0059FA18 /* GameTests.swift */,
 				018187A31ECE107F0059FA18 /* Info.plist */,
 			);
@@ -271,6 +274,7 @@
 			files = (
 				018187BB1ECE110A0059FA18 /* Game.swift in Sources */,
 				0181878F1ECE107F0059FA18 /* ViewController.swift in Sources */,
+				018187C11ECE330A0059FA18 /* BoardUpdater.swift in Sources */,
 				0181878D1ECE107F0059FA18 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,8 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				018187A21ECE107F0059FA18 /* cross_noughtTests.swift in Sources */,
 				018187BD1ECE112C0059FA18 /* GameTests.swift in Sources */,
+				018187C31ECE332C0059FA18 /* BoardUpdater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +523,7 @@
 				018187B31ECE107F0059FA18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		018187B41ECE107F0059FA18 /* Build configuration list for PBXNativeTarget "cross-noughtTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +532,7 @@
 				018187B61ECE107F0059FA18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		018187B71ECE107F0059FA18 /* Build configuration list for PBXNativeTarget "cross-noughtUITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +541,7 @@
 				018187B91ECE107F0059FA18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
