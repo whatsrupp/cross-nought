@@ -12,10 +12,18 @@ class BoardUpdater {
     
     
     func updateBoard(row: Int, column: Int, board: [[String]]) -> [[String]]{
+        
+        if spaceIsTaken(row: row, column: column, board: board){
+            return board
+        }
         var updatedBoard = board
         let token = noughtOrCross(board: board)
         updatedBoard[row][column] = token
         return updatedBoard
+    }
+    
+    func spaceIsTaken(row: Int, column: Int, board: [[String]]) -> Bool{
+        return board[row][column] != ""
     }
     
     func noughtOrCross(board: [[String]]) -> String{

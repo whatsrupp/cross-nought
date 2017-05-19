@@ -45,4 +45,36 @@ class BoardUpdaterTests: XCTestCase {
         assertBoardsAreEqual(board1: testBoard, board2: expectedBoard )
     }
     
+    func testCantOverrideAnExistingXOnXTurn(){
+        let initialBoard = [["","",""],["","X","O"],["","",""]]
+        let testBoard = board.updateBoard(row: 1, column: 1, board: initialBoard)
+        let expectedBoard = [["","",""],["","X","O"],["","",""]]
+        assertBoardsAreEqual(board1: testBoard, board2: expectedBoard )
+
+    }
+    
+    func testCantOverrideAnExistingOOnXTurn(){
+        let initialBoard = [["","",""],["","X","O"],["","",""]]
+        let testBoard = board.updateBoard(row: 1, column: 2, board: initialBoard)
+        let expectedBoard = [["","",""],["","X","O"],["","",""]]
+        assertBoardsAreEqual(board1: testBoard, board2: expectedBoard )
+        
+    }
+
+    func testCantOverrideAnExistingXOnOTurn(){
+        let initialBoard = [["","",""],["X","X","O"],["","",""]]
+        let testBoard = board.updateBoard(row: 1, column: 1, board: initialBoard)
+        let expectedBoard = [["","",""],["X","X","O"],["","",""]]
+        assertBoardsAreEqual(board1: testBoard, board2: expectedBoard )
+
+    }
+    func testCantOverrideAnExistingOOnOTurn(){
+        let initialBoard = [["","",""],["X","X","O"],["","",""]]
+        let testBoard = board.updateBoard(row: 1, column: 2, board: initialBoard)
+        let expectedBoard = [["","",""],["X","X","O"],["","",""]]
+        assertBoardsAreEqual(board1: testBoard, board2: expectedBoard )
+        
+    }
+
+    
 }
